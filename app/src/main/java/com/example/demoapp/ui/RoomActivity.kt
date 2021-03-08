@@ -55,10 +55,10 @@ class RoomActivity : AppCompatActivity() {
     private fun uploadMessage(name: String, rid: String, text: String) {
         val time = System.currentTimeMillis()
         val message = Message(text, name, time)
-        val hashMap = MessageTime(
+        val messageTime = MessageTime(
             text,name,time,rid
         )
-        db.collection("message").document(rid).set(hashMap).addOnSuccessListener {
+        db.collection("message").document(rid).set(messageTime).addOnSuccessListener {
             val messageId = UUID.randomUUID().toString()
             db.collection("message").document(rid).collection("messages").document(messageId)
                 .set(message).addOnSuccessListener {

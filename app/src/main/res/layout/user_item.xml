@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
+            android:src="@drawable/ic_baseline_emoji_emotions_24"
             android:layout_width="44dp"
             android:layout_height="44dp"/>
         <LinearLayout
